@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Female Body Types - Fit & Figure</title>
+    <link rel="stylesheet" href="stylefemale.css">
+</head>
+<body>
+    <!-- Back to Home Button -->
+    <a href="fitandfigure.html" class="back-home-btn">
+        <span>&#8592;</span> Back
+    </a>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Female Body Types</h1>
+        <p>Select your body type to get styling recommendations.</p>
+    </div>
+
+    <!-- Body Types Grid Section -->
+    <div class="button-container">
+        <div class="figure-box" onclick="showStyles('Hourglass')">
+            <img src="assets/hourglass.jpg" alt="Hourglass Body Type">
+            <p>Hourglass</p>
+            <button class="style-btn">Get Styling</button>
+        </div>
+        
+        <div class="figure-box" onclick="showStyles('Pear')">
+            <img src="assets/pear.jpg" alt="Pear Body Type">
+            <p>Pear</p>
+            <button class="style-btn">Get Styling</button>
+        </div>
+        
+        <div class="figure-box" onclick="showStyles('Apple')">
+            <img src="assets/apple.jpg" alt="Apple Body Type">
+            <p>Apple</p>
+            <button class="style-btn">Get Styling</button>
+        </div>
+        
+        <div class="figure-box" onclick="showStyles('Rectangle')">
+            <img src="assets/rectangle.jpg" alt="Rectangle Body Type">
+            <p>Rectangle</p>
+            <button class="style-btn">Get Styling</button>
+        </div>
+    </div>
+
+    <!-- Styling Recommendations Section -->
+    <div id="style-recommendations" class="style-category" style="display: none;">
+        <h2 id="style-title"></h2>
+        <ul id="style-list"></ul>
+    </div>
+
+    <script src="scriptsuggest.js"></script>
+</body>
+</html>

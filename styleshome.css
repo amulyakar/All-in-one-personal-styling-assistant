@@ -1,0 +1,348 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff6f2;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Container */
+.container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo Styling */
+.logo img {
+    max-width: 120px; /* Reduced logo size */
+    height: auto;
+    display: block;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    padding: 150px 20px 100px;
+    text-align: center;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    color: #333;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    color: #ff5e62;
+}
+
+/* Steps Section */
+.steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 80px 20px;
+    background: white;
+    text-align: center;
+}
+
+.step-box {
+    width: 300px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.step-box img {
+    width: 70%;  /* Reduce the width to 80% */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+.step-box h3 {
+    font-size: 20px;
+    color: #ff5e62;
+}
+
+.step-box p {
+    font-size: 16px;
+}
+
+/* Trending Styles Section */
+.trending {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #FFB6C1, #fad0c4);
+    color: white;
+}
+
+.trending-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.trending-text {
+    flex: 1;
+    text-align: left;
+}
+
+.trending-text h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.trending-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #ffffff;
+    color: rgb(224, 224, 177);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: #e04e56;
+}
+
+.trending-image {
+    flex: 1;
+    text-align: right;
+}
+
+.trending-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Testimonials */
+.testimonials {
+    padding: 80px 20px;
+    text-align: center;
+    background: white;
+}
+
+/* Footer */
+footer {
+    background: #ff758c;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-section {
+    width: 200px;
+    text-align: left;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    width: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+    .trending-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .trending-text {
+        text-align: center;
+    }
+
+    .trending-image {
+        text-align: center;
+    }
+}
+
+/* ===== Blog and Figure & Fit Sections ===== */
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10%;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.info-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-text h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.info-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.info-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.info-image {
+    flex: 1;
+    text-align: center;
+}
+
+.info-image img {
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* Background color for Blog Section */
+.blog-section {
+    background-color: #fef6f0; /* soft peachy tone */
+}
+
+/* Background color for Style Type Section */
+.style-type-section {
+    background-color: #f0f4ff; /* soft bluish tone */
+}
+.blog-section {
+    background-color: #D3D3D3 ; /* light pink */
+}
+
+.style-type-section {
+    background-color: #f0f8ff; /* very light blue */
+}
+.style-type-section {
+    background-color: #f0f8ff; /* Light baby blue */
+    padding: 50px 10%;
+}
+/* Color Analysis Section Styling */
+.color-analysis-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 10%;
+    background-color: #fef6f0; /* Background color you set for Color Analysis */
+}
+
+/* Container for the image */
+.color-analysis-image {
+    flex: 1;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Image inside Color Analysis */
+.color-analysis-image img {
+    width: 90%; /* Adjust the width as necessary */
+    max-width: 400px; /* Keep max-width consistent with other sections */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for styling */
+}

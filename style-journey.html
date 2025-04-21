@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Journey - AI Styling Assistant</title>
+    <link rel="stylesheet" href="styleshome.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="AI Styling Logo" width="500" height="auto">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="styletype.html">Style Type</a></li>
+                    <li><a href="color-analysis.html">Color Analysis</a></li>
+                    <li><a href="fitandfigure.html">Figure & Fit</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Your Style Journey</h1>
+        <p>Complete this simple 3-step process to get personalized outfit suggestions just for you!</p>
+    </section>
+
+    <form action="outfit-suggestions.html" method="GET">
+        <h2>Step 1: Select Your Body Type</h2>
+        <select id="bodyType" name="bodyType" required>
+            <option value="Hourglass">Hourglass</option>
+            <option value="Rectangle">Rectangle</option>
+            <option value="Pear">Pear</option>
+            <option value="Apple">Apple</option>
+            <option value="Inverted Triangle">Inverted Triangle</option>
+        </select>
+
+        <h2>Step 2: Select Your Skin Color Tone</h2>
+        <select id="colorTone" name="colorTone" required>
+            <option value="Warm">Warm</option>
+            <option value="Cool">Cool</option>
+            <option value="Neutral">Neutral</option>
+        </select>
+
+        <h2>Step 3: Select Your Style Type</h2>
+        <select id="styleType" name="styleType" required>
+            <option value="Casual">Casual</option>
+            <option value="Formal">Formal</option>
+            <option value="Bohemian">Bohemian</option>
+            <option value="Sporty">Sporty</option>
+            <option value="Chic">Chic</option>
+        </select>
+
+        <button type="submit" class="cta-button">Get My Outfit Suggestions</button>
+    </form>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul>
+                    <li>Our Story</li>
+                    <li>How It Works</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>Color Analysis</li>
+                    <li>Style Guide</li>
+                    <li>FAQs</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="assets/facebook.avif" alt="Facebook"></a>
+                    <a href="#"><img src="assets/insta.png" alt="Instagram"></a>
+                    <a href="#"><img src="assets/twitter.jpg" alt="Twitter"></a>
+                    <a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AI Styling Assistant. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
