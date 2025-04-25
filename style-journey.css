@@ -24,63 +24,76 @@ body {
 
 /* Header */
 header {
-    background: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    padding: 20px 0;
-}
-
-.logo img {
-    max-width: 250px;
-    height: auto;
-}
-
-nav ul {
-    list-style: none;
+    background: linear-gradient(to right, #ff69b4);
+    padding: 0.8rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-container {
     display: flex;
-    gap: 25px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #ff1493;
-    font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+  }
+  
+  .left-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 40px;
+  }
+  
+  .explore-link {
     font-size: 1.1rem;
-    position: relative;
-}
-
-nav ul li a::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background: #ff69b4;
-    left: 0;
-    bottom: -5px;
-    transition: 0.3s;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .right-section ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .right-section a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+  }
 
 /* Hero Section */
 .hero {
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #ffe4e1, #f8bbd0);
-    color: #4a004a;
+    display: flex;
+    justify-content: space-between;  /* Aligns items on opposite ends */
+    align-items: center;             /* Vertically centers the items */
+    padding: 20px;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
-    font-weight: 700;
+.hero-text {
+    flex: 1;
+    text-align: left;
+    margin-right: 2px;  /* Adds some space between text and image */
+    margin-left: 100px; /* Adds some space on the left */
+
 }
 
-.hero p {
-    font-size: 1.3rem;
-    color: #6e006e;
+.hero-image img {
+    max-width: 100%;  /* Makes sure the image can scale responsively */
+    width: 500px;     /* You can adjust the width */
+    height: auto;
 }
+
 
 /* Form Section */
 form {

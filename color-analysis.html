@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Personal Style Assistant - Color Analysis</title>
-  <link rel="stylesheet" href="stylescoloranalysis.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <title>Personal Style Assistant - Color Analysis</title>
+  <link rel="stylesheet" href="stylescoloranalysis.css" />
 </head>
 <body>
+  <header class="styled-header">
+    <a href="Home.html" class="home-btn">
+      <i data-lucide="arrow-left"></i> Home
+    </a>
   
-  <!-- Back to Home Button -->
-  <a href="Home.html" class="back-home-btn">← Home</a>
-
-  <div class="header">
-    <h1>Find Your Best Colors</h1>
-    <p>Select your undertone to discover the most flattering colors for you.</p>
-  </div>
-
+    <h1 class="page-title">Find Your Best Colors</h1>
+  
+    <div class="header-links">
+      <a href="Blog.html"><i data-lucide="book-open-text"></i> Blog</a>
+    </div>
+  </header>
+  
+  
   <div class="tone-container">
     <div class="tone-option warm" onclick="showColors('warm')">
       <h2>Warm</h2>
-      
     </div>
     <div class="tone-option cool" onclick="showColors('cool')">
       <h2>Cool</h2>
-      
     </div>
     <div class="tone-option neutral" onclick="showColors('neutral')">
       <h2>Neutral</h2>
-      
     </div>
   </div>
 
   <div id="color-recommendation" class="color-box"></div>
 
   <script src="coloranalysis.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+  
 </body>
 </html>

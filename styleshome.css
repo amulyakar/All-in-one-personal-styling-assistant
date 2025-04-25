@@ -76,38 +76,25 @@ header {
     color: #000 !important;
   }
   
-
-.hero {
-  text-align: center;
-  padding: 100px 20px 60px;
-  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  .hero {
+    display: flex;
+    justify-content: space-between;  /* Aligns items on opposite ends */
+    align-items: center;             /* Vertically centers the items */
+    padding: 20px;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  color: #ff5e62;
+.hero-text {
+    flex: 1;
+    text-align: left;
+    margin-right: 20px;  /* Adds some space between text and image */
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-top: 10px;
+.hero-image img {
+    max-width: 100%;  /* Makes sure the image can scale responsively */
+    width: 500px;     /* You can adjust the width */
+    height: auto;
 }
 
-.hero-button {
-  margin-top: 25px;
-  padding: 12px 25px;
-  font-weight: 600;
-  background-color: #ff5e62;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.hero-button:hover {
-  background-color: #e04e56;
-}
 
 
 .features.flip-layout {
