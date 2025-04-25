@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Styling Assistant</title>
     <link rel="stylesheet" href="styleshome.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 <body>
     <header>
@@ -80,7 +82,7 @@
         </div>
     </section>
 
-
+    <section id="steps" class="steps" data-aos="fade-up">
     <section id="style-type" class="style-type-section" style="padding: 50px 10%; display: flex; align-items: center; justify-content: space-between;">
         <!-- Left side: Text -->
         <div style="width: 50%;">
@@ -148,6 +150,10 @@
             <p>&copy; 2025 AI Styling Assistant. All rights reserved.</p>
         </div>
     </footer>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    
 </body>
 </html>

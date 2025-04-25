@@ -1,94 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outfit Suggestions - AI Styling Assistant</title>
-    <link rel="stylesheet" href="styleshome.css">
-    <script>
-        function getQueryParams() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const bodyType = urlParams.get('bodyType');
-            const colorTone = urlParams.get('colorTone');
-            const styleType = urlParams.get('styleType');
-            return { bodyType, colorTone, styleType };
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Outfit Suggestions - AI Styling Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="outfit-suggestions.css">
 
-        function displaySuggestions() {
-            const { bodyType, colorTone, styleType } = getQueryParams();
-            
-            document.getElementById("body-type").textContent = bodyType;
-            document.getElementById("color-tone").textContent = colorTone;
-            document.getElementById("style-type").textContent = styleType;
+  <script>
+    function getQueryParams() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const bodyType = urlParams.get('bodyType');
+      const colorTone = urlParams.get('colorTone');
+      const styleType = urlParams.get('styleType');
+      return { bodyType, colorTone, styleType };
+    }
 
-            const pinterestUrl = `https://www.pinterest.com/search/pins/?q=${bodyType}%20${colorTone}%20${styleType}`;
-            document.getElementById("pinterest-link").href = pinterestUrl;
-            document.getElementById("pinterest-link").textContent = `Explore Pinterest for ${bodyType}, ${colorTone}, and ${styleType} outfits`;
-        }
-    </script>
+    function displaySuggestions() {
+      const { bodyType, colorTone, styleType } = getQueryParams();
+
+      // Debugging log to check query parameters
+      console.log("Body Type:", bodyType);
+      console.log("Color Tone:", colorTone);
+      console.log("Style Type:", styleType);
+
+      // Display selected options in the input summary section
+      document.getElementById("body-type").textContent = bodyType;
+      document.getElementById("color-tone").textContent = colorTone;
+      document.getElementById("style-type").textContent = styleType;
+
+      // Generate the image file name based on parameters
+      const imageName = `${bodyType.toLowerCase()}_${colorTone.toLowerCase()}_${styleType.toLowerCase()}.png`;
+      console.log("Generated Image Path:", `assets/outfits/${imageName}`);
+
+
+      // Log the image path for debugging
+      //console.log("Generated Image Path:", `assets/outfits/${imageName}`);
+
+      // Get the image element and set the image source
+      const outfitImage = document.getElementById("outfit-image");
+      outfitImage.src = `assets/outfits/${imageName}`;
+      outfitImage.alt = `Outfit for ${bodyType}, ${colorTone}, ${styleType}`;
+
+      // Check if the image loads successfully
+      outfitImage.onload = function () {
+        console.log("Image Loaded Successfully!");
+      };
+
+      // If image not found, set a default fallback image
+      outfitImage.onerror = function () {
+        console.log("Image not found. Showing default.");
+        outfitImage.src = "assets/outfits/default.png"; // Fallback image
+        outfitImage.alt = "Default outfit suggestion";
+      };
+    }
+  </script>
 </head>
 <body onload="displaySuggestions()">
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="assets/logo.png" alt="AI Styling Logo" width="200" height="auto">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="styletype.html">Style Type</a></li>
-                    <li><a href="color-analysis.html">Color Analysis</a></li>
-                    <li><a href="fitandfigure.html">Figure & Fit</a></li>
-                    <li><a href="Blog.html">Blog</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero">
-        <h1>Your Personalized Outfit Suggestions</h1>
-        <p>Based on your selections, here are the outfit suggestions just for you!</p>
-    </section>
-
-    <section class="outfit-suggestions">
-        <h2>Your Selections:</h2>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="assets/logo.png" alt="AI Styling Logo" width="160">
+      </div>
+      <nav>
         <ul>
-            <li><strong>Body Type:</strong> <span id="body-type"></span></li>
-            <li><strong>Color Tone:</strong> <span id="color-tone"></span></li>
-            <li><strong>Style Type:</strong> <span id="style-type"></span></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="styletype.html">Style Type</a></li>
+          <li><a href="color-analysis.html">Color Analysis</a></li>
+          <li><a href="fitandfigure.html">Figure & Fit</a></li>
+          <li><a href="Blog.html">Blog</a></li>
         </ul>
+      </nav>
+    </div>
+  </header>
 
-        <h3>Outfit Ideas from Pinterest:</h3>
-        <p>Click the link below to explore Pinterest for more outfit inspiration based on your personalized selections:</p>
-        <a id="pinterest-link" href="#" target="_blank" class="cta-button">Loading Pinterest...</a>
-    </section>
+  <section class="hero">
+    <h1>Your Personalized Outfit Suggestion</h1>
+    <p>Based on your inputs, here’s a curated outfit just for you:</p>
+  </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>About Us</h3>
-                <ul>
-                    <li>Our Story</li>
-                    <li>How It Works</li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li>Color Analysis</li>
-                    <li>Style Guide</li>
-                    <li>FAQs</li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="#"><img src="assets/facebook.avif" alt="Facebook"></a>
-                    <a href="#"><img src="assets/insta.png" alt="Instagram"></a>
-                    <a href="#"><img src="assets/twitter.jpg" alt="Twitter"></a>
-                    <a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a>
-                </div>
-            </div>
+  <section class="input-summary-section">
+    <ul class="input-summary">
+      <li><strong>Body Type:</strong> <span id="body-type"></span></li>
+      <li><strong>Color Tone:</strong> <span id="color-tone"></span></li>
+      <li><strong>Style Type:</strong> <span id="style-type"></span></li>
+    </ul>
+  </section>
+
+  <section class="outfit-feature">
+    <div class="image-wrapper">
+      <img id="outfit-image" class="generated-outfit" src="" alt="Suggested Outfit" />
+    </div>
+  </section>
+
+  <div class="center-btn">
+    <button class="cta-button">Explore Similar Styles</button>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <ul>
+          <li>Our Story</li>
+          <li>How It Works</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li>Color Analysis</li>
+          <li>Style Guide</li>
+          <li>FAQs</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><img src="assets/facebook.avif" alt="Facebook"></a>
+          <a href="#"><img src="assets/insta.png" alt="Instagram"></a>
+          <a href="#"><img src="assets/twitter.jpg" alt="Twitter"></a>
+          <a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 AI Styling Assistant
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 AI Styling Assistant</p>
+    </div>
+  </footer>
+</body>
+</html>
