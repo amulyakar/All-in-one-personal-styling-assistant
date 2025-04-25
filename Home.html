@@ -1,159 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styling Assistant</title>
-    <link rel="stylesheet" href="styleshome.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Styling Assistant</title>
+  <link rel="stylesheet" href="styleshome.css"/>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <img src="assets/logo.png" alt="Styling Logo">
+        <div class="container header-container">
+          <div class="left-section">
+            <img src="assets/logo.png" alt="Logo" class="logo" />
+            <a href="style-journey.html" class="explore-link">Explore</a>
+          </div>
+          <nav class="right-section">
+            <ul>
+              <li><a href="style-journey.html">Style Journey</a></li>
+              <li><a href="fitandfigure.html">Figure & Fit</a></li>
+              <li><a href="color-analysis.html">Color Analysis</a></li>
+              <li><a href="styletype.html">Style Type</a></li>
+              <li><a href="Blog.html">Blog</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="login.html" class="login-btn">Log in</a></li>
+              <li><a href="signup.html" class="signup-btn">Sign up</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      
+  <section class="hero-slider">
+    <div class="slide active" style="background-image: url('assets/slideimg1.png');">
+      <div class="hero-content">
+        <h1>Discover Your Personal Style</h1>
+        <p>Tailored outfit advice made just for you.</p>
+        <a href="style-journey.html" class="hero-button">Start Your Style Journey</a>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('assets/slideimg2.png');">
+      <div class="hero-content">
+        <h1>Flatter Your Figure</h1>
+        <p>Choose clothes that complement your shape.</p>
+        <a href="fitandfigure.html" class="hero-button">Find Your Fit</a>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('assets/slideimg3.png');">
+      <div class="hero-content">
+        <h1>Color That Suits You</h1>
+        <p>Discover palettes that enhance your look.</p>
+        <a href="color-analysis.html" class="hero-button">Explore Colors</a>
+      </div>
+    </div>
+  
+    <div class="dots">
+      <span class="dot active"onclick="moveToSlide(0)"></span>
+      <span class="dot" onclick="moveToSlide(1)"></span>
+      <span class="dot" onclick="moveToSlide(2)"></span>
+    </div>
+  </section>
+    <section class="features flip-layout">
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="assets/bodyshapes.jpg" alt="Body Type" />
+              <h3>Figure & Fit</h3>
+              <p>Discover clothing that flatters your body shape effortlessly.</p>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="fitandfigure.html">Figure & Fit</a></li>
-                    <li><a href="color-analysis.html">Color Analysis</a></li>
-                    <li><a href="styletype.html">Style Type</a></li>
-                    <li><a href="style-journey.html">Style Journey</a></li>
-                    <li><a href="Blog.html">Blog</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero">
-        <h1>All In One Personal Styling Assistant</h1>
-        <p>Discover the perfect colors and styles tailored just for you with fashion analysis.</p>
-    </section>
-
-    <h2 style="text-align: center;">Style Journey</h2>
-    <section id="steps" class="steps">
-        <div class="step-box">
-            <img src="assets/bodyshapes.jpg" alt="Select your body type">
-            <h3>Step 1</h3>
-            <p>Choose your body type.</p>
-        </div>
-        <div class="step-box">
-            <img src="assets/colorpallete4.jpg" alt="Get your color palette">
-            <h3>Step 2</h3>
-            <p>Choose your undertone.</p>
-        </div>
-        <div class="step-box">
-            <img src="assets/stylie.jpg" alt="Choose style type">
-            <h3>Step 3</h3>
-            <p>Choose styling type.</p>
-        </div>
-    </section>
-    <section style="text-align: center; padding: 30px;">
-        <a href="style-journey.html" class="cta-button">Start Your Style Journey</a>
-    </section>
-
-    <section id="figure-fit" class="info-section">
-        <div class="info-text">
-            <h2>Figure & Fit</h2>
-            <p>Understanding your body shape helps you pick styles that highlight your best features. Just one click suggests the best clothing fits, prints, and fabrics tailored for you.</p>
-            <a href="fitandfigure.html" class="info-button">Discover Your Fit</a>
-        </div>
-        <div class="info-image">
-            <img src="assets/figure-fit.jpg" alt="Figure and Fit">
-        </div>
-    </section>
-    
-
-    <section class="trending">
-        <div class="trending-content">
-            <div class="trending-text">
-                <h2>Color Analysis</h2>
-                <p>Just one click on your colortone to see your features and reveal the colors that will best enhance your natural beauty.</p>
-                <a href="color-analysis.html" class="cta-button">Explore Now</a>
+            <div class="flip-back">
+              <h3>Figure & Fit</h3>
+              <p>Find your perfect fit now!</p>
+              <a href="fitandfigure.html" class="card-button">Discover Your Fit</a>
             </div>
-            <!-- Image in Color Analysis Section -->
-<div class="color-analysis-image">
-    <img src="assets/coloranalysis1.jpg" width="400" height="auto" alt="Color Analysis Image">
-</div>
-
+          </div>
         </div>
-    </section>
-
-    <section id="steps" class="steps" data-aos="fade-up">
-    <section id="style-type" class="style-type-section" style="padding: 50px 10%; display: flex; align-items: center; justify-content: space-between;">
-        <!-- Left side: Text -->
-        <div style="width: 50%;">
-            <h2 style="text-align: left; font-size: 28px;">Style Type</h2>
-            <p style="font-size: 18px; line-height: 1.6;">
-                Want styles that match your occasions? This is where you have it. Click and reveal.
-            </p>
-            <a href="styletype.html" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: #000; color: #fff; text-decoration: none; border-radius: 5px;">
-                Explore Now
-            </a>
+      
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="assets/colorpallete4.jpg" alt="Color Palette" />
+              <h3>Color Analysis</h3>
+              <p>Analyze your undertone and find shades that suit you best.</p>
+            </div>
+            <div class="flip-back">
+              <h3>Color Analysis</h3>
+              <p>Explore your perfect colors!</p>
+              <a href="color-analysis.html" class="card-button">Explore Colors</a>
+            </div>
+          </div>
         </div>
-    
-        <!-- Right side: Image -->
-        <div style="width: 50%; display: flex; justify-content: center;">
-            <img src="assets/typestyles.jpg" alt="Style Type" style="width: 90%; max-width: 400px; border-radius: 10px;">
+      
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="assets/typestyles.jpg" alt="Style Type" />
+              <h3>Style Type</h3>
+              <p>Get styling recommendations based on your personality and needs.</p>
+            </div>
+            <div class="flip-back">
+              <h3>Style Type</h3>
+              <p>Discover your unique style!</p>
+              <a href="styletype.html" class="card-button">Explore Style</a>
+            </div>
+          </div>
         </div>
-    </section>
-    
+      </section>
+      
       
 
-
-
-    <section id="Blog" class="blog-section" style="padding: 50px 10%; display: flex; align-items: center;">
-        <div class="info-text">
-            <h2>Blog</h2>
-            <p>Think you need more exploring? Go on and look for basic outfits, colors and styling trends.</p>
-            <a href="Blog.html" class="info-button">Discover the trends</a>
+      <section class="blog">
+        <div class="blog-content">
+          <img src="assets/blog.jpg" alt="Blog" />
+          <div>
+            <h2>Fashion Blog</h2>
+            <p>Stay updated with trends, tips, and style guides curated just for you.</p>
+            <a href="Blog.html" class="card-button">Read the Blog</a>
+          </div>
         </div>
-        <div class="info-image">
-            <img src="assets/blog.jpg" alt="Blog">
+      </section>
+      <section id="testimonials" class="testimonials">
+        <h2><center>What Our Users Say</center></h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <img src="https://i.imgur.com/dYcYQ7E.png" alt="Sarah">
+            <p>"Changed how I shop and dress!"</p>
+            <h4>– Sarah</h4>
+          </div>
+          <div class="testimonial-card">
+            <img src="https://i.imgur.com/wx5Cz0V.png" alt="Emily">
+            <p>"The color palette tool is gold."</p>
+            <h4>– Emily</h4>
+          </div>
+          <div class="testimonial-card">
+            <img src="https://i.imgur.com/1X4ZQ2e.png" alt="John">
+            <p>"I finally found clothes that suit me."</p>
+            <h4>– John</h4>
+          </div>
+          <div class="testimonial-card">
+            <img src="https://i.imgur.com/kj0sF1y.png" alt="Rachel">
+            <p>"My confidence has skyrocketed!"</p>
+            <h4>– Rachel</h4>
+          </div>
         </div>
-    </section>
-    
-
-    <section id="testimonials" class="testimonials">
-        <h2>What Our Users Say</h2>
-        <div class="testimonial"><p>"This all in one styling assistant changed the way I shop!" – Sarah</p></div>
-        <div class="testimonial"><p>"Love the color analysis, it's so accurate!" – Emily</p></div>
-        <div class="testimonial"><p>"I found the perfect outfits for my skin tone thanks to this website!" – John</p></div>
-        <div class="testimonial"><p>"A game-changer for anyone who wants to improve their fashion game!" – Rachel</p></div>
-        <div class="testimonial"><p>"The color palette suggestions were spot on. I feel more confident in my style now!" – Alex</p></div>
-    </section>
-
-    <footer id="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>About Us</h3>
-                <ul><li>Our Story</li><li>How It Works</li></ul>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul><li>Color Analysis</li><li>Style Guide</li><li>FAQs</li></ul>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="#"><img src="assets/facebook.avif" alt="Facebook"></a>
-                    <a href="#"><img src="assets/insta.png" alt="Instagram"></a>
-                    <a href="#"><img src="assets/twitter.jpg" alt="Twitter"></a>
-                    <a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a>
-                </div>
-            </div>
+      </section>
+      
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h4>About</h4>
+        <ul><li>Our Story</li><li>How It Works</li></ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul><li>FAQs</li><li>Style Guide</li></ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social">
+          <a href="#"><img src="assets/facebook.avif" alt="Facebook" /></a>
+          <a href="#"><img src="assets/insta.png" alt="Instagram" /></a>
+          <a href="#"><img src="assets/twitter.jpg" alt="Twitter" /></a>
+          <a href="#"><img src="assets/linkedin.png" alt="LinkedIn" /></a>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 AI Styling Assistant. All rights reserved.</p>
-        </div>
-    </footer>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 2025 Styling Assistant</p>
+  </footer>
+  <script>
+    const cards = document.querySelectorAll('.feature-card');
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+  
+    cards.forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+  <script>
+    const masonryCards = document.querySelectorAll('.masonry-card');
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+  
+    masonryCards.forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+  
+  
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+    let slideInterval = setInterval(nextSlide, 2000);
+  
+    function nextSlide() {
+      moveToSlide((currentSlide + 1) % slides.length);
+    }
+  
+    function moveToSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide].classList.remove('active');
+  
+      currentSlide = index;
+  
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+    }
+  </script>
+  
+  
 </body>
 </html>
