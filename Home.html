@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Styling Assistant</title>
   <link rel="stylesheet" href="styleshome.css"/>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
 </head>
 <body>
     <header>
@@ -116,32 +119,53 @@
           </div>
         </div>
       </section>
-      <section id="testimonials" class="testimonials">
-        <h2><center>What Our Users Say</center></h2>
-        <div class="testimonial-grid">
-          <div class="testimonial-card">
-            <img src="https://i.imgur.com/dYcYQ7E.png" alt="Sarah">
-            <p>"Changed how I shop and dress!"</p>
-            <h4>– Sarah</h4>
-          </div>
-          <div class="testimonial-card">
-            <img src="https://i.imgur.com/wx5Cz0V.png" alt="Emily">
-            <p>"The color palette tool is gold."</p>
-            <h4>– Emily</h4>
-          </div>
-          <div class="testimonial-card">
-            <img src="https://i.imgur.com/1X4ZQ2e.png" alt="John">
-            <p>"I finally found clothes that suit me."</p>
-            <h4>– John</h4>
-          </div>
-          <div class="testimonial-card">
-            <img src="https://i.imgur.com/kj0sF1y.png" alt="Rachel">
-            <p>"My confidence has skyrocketed!"</p>
-            <h4>– Rachel</h4>
-          </div>
-        </div>
-      </section>
-      
+<section id="testimonials" class="testimonials">
+  <h2><center>What Our Users Say</center></h2>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <!-- Original + New Testimonials -->
+      <div class="swiper-slide testimonial-card">
+        <img src="assets/profilepic1.jpg" alt="Sarah" />
+        <p>"Changed how I shop and dress!"</p>
+        <h4>– Sarah</h4>
+      </div>
+      <div class="swiper-slide testimonial-card">
+        <img src="assets/profilepic2.jpg" alt="Emily" />
+        <p>"The color palette tool is gold."</p>
+        <h4>– Emily</h4>
+      </div>
+      <div class="swiper-slide testimonial-card">
+        <img src="assets/profilepic3.jpeg" alt="John" />
+        <p>"I finally found clothes that suit me."</p>
+        <h4>– John</h4>
+      </div>
+      <div class="swiper-slide testimonial-card">
+        <img src="assets/profilepic5.jpeg" alt="Rachel" />
+        <p>"My confidence has skyrocketed!"</p>
+        <h4>– Rachel</h4>
+      </div>
+      <!-- Extra Testimonials -->
+      <div class="swiper-slide testimonial-card">
+        <img src="assets/profilepic4.jpg" alt="Alex" />
+        <p>"StyleSphere made me feel like I have a personal stylist!"</p>
+        <h4>– Alex</h4>
+      </div>
+      <div class="swiper-slide testimonial-card">
+        <img src="assets/profilepic6.jpeg" alt="Priya" />
+        <p>"I never thought dressing right for my body could be this easy."</p>
+        <h4>– Priya</h4>
+      </div>
+      <div class="swiper-slide testimonial-card">
+        <img src="assets/profilepic8.jpeg" alt="David" />
+        <p>"The tips are so practical and stylish – highly recommend!"</p>
+        <h4>– David</h4>
+      </div>
+    </div>
+   <!-- Pagination Dots -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+  
   <footer>
     <div class="footer-content">
       <div>
@@ -220,7 +244,39 @@
       dots[currentSlide].classList.add('active');
     }
   </script>
+ <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Your Swiper Init Script -->
+<script>
+  const swiper = new Swiper(".swiper", {
+    loop: true,
+    speed: 3000,               // smooth flow
+    autoplay: {
+      delay: 0,                // continuous
+      disableOnInteraction: false,
+    },
+    slidesPerView: 'auto',     // allow multiple cards
+    spaceBetween: 30,
+    grabCursor: true,
+    freeMode: true,            // important for smooth scrolling
+    freeModeMomentum: false,   // no snapping
+    breakpoints: {
+      768: {
+        slidesPerView: 0.5,
+      },
+      1024: {
+        slidesPerView: 5,
+      },
+    },
+  });
+</script>
+
+
+
   
+
+
   
 </body>
 </html>
