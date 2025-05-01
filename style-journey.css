@@ -30,47 +30,61 @@ header {
     top: 0;
     z-index: 10;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .header-container {
+}
+
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-  }
-  
-  .left-section {
+}
+
+.left-section {
     display: flex;
     align-items: center;
     gap: 20px;
-  }
-  
-  .logo {
+}
+
+.logo {
     width: 50px;
     height: 40px;
-  }
-  
-  .explore-link {
+}
+
+.explore-link {
     font-size: 1.1rem;
     color: #000;
     text-decoration: none;
     font-weight: 500;
-  }
-  
-  .right-section ul {
+}
+
+.right-section ul {
     display: flex;
     align-items: center;
     gap: 25px;
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  
-  .right-section a {
+}
+
+.right-section a {
     text-decoration: none;
     color: #000;
     font-weight: 500;
-  }
+}
+
+/* Home Button (Updated) */
+a.home-btn {
+    text-decoration: none;
+    color: #fff;  /* White text for consistency */
+    font-weight: 500;  /* Medium weight to match the others */
+    font-size: 1.1rem;  /* Same font size as other links */
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+a.home-btn:hover {
+    color: #ffe4e1;  /* Light pink on hover */
+    text-decoration: underline;  /* Underline effect for clarity */
+}
 
 /* Hero Section */
 .hero {
@@ -85,7 +99,6 @@ header {
     text-align: left;
     margin-right: 2px;  /* Adds some space between text and image */
     margin-left: 100px; /* Adds some space on the left */
-
 }
 
 .hero-image img {
@@ -93,7 +106,6 @@ header {
     width: 500px;     /* You can adjust the width */
     height: auto;
 }
-
 
 /* Form Section */
 form {

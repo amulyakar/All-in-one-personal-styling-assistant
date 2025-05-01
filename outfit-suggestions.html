@@ -16,44 +16,38 @@
       return { bodyType, colorTone, styleType };
     }
 
-    function displaySuggestions() {
-      const { bodyType, colorTone, styleType } = getQueryParams();
+  function displaySuggestions() {
+  const { bodyType, colorTone, styleType } = getQueryParams();
 
-      // Debugging log to check query parameters
-      console.log("Body Type:", bodyType);
-      console.log("Color Tone:", colorTone);
-      console.log("Style Type:", styleType);
+  document.getElementById("body-type").textContent = bodyType;
+  document.getElementById("color-tone").textContent = colorTone;
+  document.getElementById("style-type").textContent = styleType;
 
-      // Display selected options in the input summary section
-      document.getElementById("body-type").textContent = bodyType;
-      document.getElementById("color-tone").textContent = colorTone;
-      document.getElementById("style-type").textContent = styleType;
+  const imageName = `${bodyType.toLowerCase()}_${colorTone.toLowerCase()}_${styleType.toLowerCase()}.png`;
+  const outfitImage = document.getElementById("outfit-image");
 
-      // Generate the image file name based on parameters
-      const imageName = `${bodyType.toLowerCase()}_${colorTone.toLowerCase()}_${styleType.toLowerCase()}.png`;
-      console.log("Generated Image Path:", `assets/outfits/${imageName}`);
+  // Remove existing fade-in class (in case user reloads or image changes)
+  outfitImage.classList.remove("fade-in");
 
+  // Temporarily clear the src to trigger image reload
+  outfitImage.src = "";
 
-      // Log the image path for debugging
-      //console.log("Generated Image Path:", `assets/outfits/${imageName}`);
+  // Set image source and alt
+  outfitImage.src = `assets/outfits/${imageName}`;
+  outfitImage.alt = `Outfit for ${bodyType}, ${colorTone}, ${styleType}`;
 
-      // Get the image element and set the image source
-      const outfitImage = document.getElementById("outfit-image");
-      outfitImage.src = `assets/outfits/${imageName}`;
-      outfitImage.alt = `Outfit for ${bodyType}, ${colorTone}, ${styleType}`;
+  outfitImage.onload = function () {
+    outfitImage.classList.add("fade-in"); // Add fade-in when loaded
+    console.log("Image Loaded Successfully!");
+  };
 
-      // Check if the image loads successfully
-      outfitImage.onload = function () {
-        console.log("Image Loaded Successfully!");
-      };
-
-      // If image not found, set a default fallback image
-      outfitImage.onerror = function () {
-        console.log("Image not found. Showing default.");
-        outfitImage.src = "assets/outfits/default.png"; // Fallback image
-        outfitImage.alt = "Default outfit suggestion";
-      };
-    }
+  outfitImage.onerror = function () {
+    outfitImage.src = "assets/outfits/default.png";
+    outfitImage.alt = "Default outfit suggestion";
+    outfitImage.classList.add("fade-in"); // Also apply fade-in to fallback
+    console.log("Image not found. Showing default.");
+  };
+}
   </script>
 </head>
 <body onload="displaySuggestions()">
@@ -92,11 +86,6 @@
       <img id="outfit-image" class="generated-outfit" src="" alt="Suggested Outfit" />
     </div>
   </section>
-
-  <div class="center-btn">
-    <button class="cta-button">Explore Similar Styles</button>
-  </div>
-
   <footer>
     <div class="footer-content">
       <div class="footer-section">

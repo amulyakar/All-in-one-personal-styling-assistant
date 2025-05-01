@@ -2,43 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <title>Personal Style Assistant - Color Analysis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Color Analysis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="stylescoloranalysis.css" />
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="styled-header">
-    <a href="Home.html" class="home-btn">
-      <i data-lucide="arrow-left"></i> Home
-    </a>
-  
-    <h1 class="page-title">Find Your Best Colors</h1>
-  
-    <div class="header-links">
-      <a href="Blog.html"><i data-lucide="book-open-text"></i> Blog</a>
-    </div>
+  <header>
+    <div class="header-title">Styla</div>
+    <nav class="header-links">
+      <a href="Home.html">Home</a>
+      <a href="style-journey.html">Explore</a>
+      <a href="Home.html">About</a>
+    </nav>
   </header>
-  
-  
-  <div class="tone-container">
-    <div class="tone-option warm" onclick="showColors('warm')">
-      <h2>Warm</h2>
-    </div>
-    <div class="tone-option cool" onclick="showColors('cool')">
-      <h2>Cool</h2>
-    </div>
-    <div class="tone-option neutral" onclick="showColors('neutral')">
-      <h2>Neutral</h2>
-    </div>
-  </div>
 
-  <div id="color-recommendation" class="color-box"></div>
+  <main>
+    <h1 class="page-title">Your Color Analysis Result</h1>
+    <div class="tone-container">
+      <div class="tone-option" onclick="selectTone(this)">
+        <h2>Cool Tone</h2>
+        <div class="color-palette">
+          <div class="color" style="background-color: #b3cde0;"></div>
+          <div class="color" style="background-color: #6497b1;"></div>
+          <div class="color" style="background-color: #005b96;"></div>
+          <div class="color" style="background-color: #03396c;"></div>
+          <div class="color" style="background-color: #011f4b;"></div>
+        </div>
+      </div>
 
-  <script src="coloranalysis.js"></script>
-  <script>
-    lucide.createIcons();
-  </script>
-  
+      <div class="tone-option" onclick="selectTone(this)">
+        <h2>Warm Tone</h2>
+        <div class="color-palette">
+          <div class="color" style="background-color: #ffcc99;"></div>
+          <div class="color" style="background-color: #ff9966;"></div>
+          <div class="color" style="background-color: #ff6600;"></div>
+          <div class="color" style="background-color: #cc5200;"></div>
+          <div class="color" style="background-color: #993d00;"></div>
+        </div>
+      </div>
+
+      <div class="tone-option" onclick="selectTone(this)">
+        <h2>Neutral Tone</h2>
+        <div class="color-palette">
+          <div class="color" style="background-color: #f0e6d6;"></div>
+          <div class="color" style="background-color: #c8bfae;"></div>
+          <div class="color" style="background-color: #a89f91;"></div>
+          <div class="color" style="background-color: #888072;"></div>
+          <div class="color" style="background-color: #70695c;"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="Home.html">Home</a>
+        <a href="style-journey.html">Explore</a>
+        <a href="Home.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://www.twitter.com" target="_blank">Twitter</a>
+      </div>
+      <p>&copy; 2025 Styla. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>

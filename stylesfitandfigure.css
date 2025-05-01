@@ -6,7 +6,14 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #FAF8F6;
     color: #333;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least 100% of the viewport height */
+}
+
+/* Main Content Section */
+main {
+    flex: 1; /* Allow main content to take up remaining space */
 }
 
 /* Back to Home Button */
@@ -40,21 +47,26 @@ body {
 .header {
     background: linear-gradient(to right, #FF6B6B, #FFA07A);
     color: white;
-    padding: 40px 20px;
+    padding: 20px 15px; /* Reduced padding */
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .header h1 {
     margin: 0;
-    font-size: 2.2rem;
+    font-size: 1.8rem; /* Slimmer font */
     font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .header p {
-    margin-top: 10px;
-    font-size: 1.1rem;
+    margin-top: 5px;
+    font-size: 0.95rem;
+    font-weight: 300;
 }
+
 
 /* Gender Selection Section */
 .tone-container {
@@ -180,4 +192,39 @@ body {
     .tone-option p {
         font-size: 0.8rem;
     }
+}
+
+/* Footer Styles */
+.footer {
+    background: linear-gradient(to right, #FF6B6B, #FFA07A);
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    margin-top: 60px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    opacity: 0.9;
 }
